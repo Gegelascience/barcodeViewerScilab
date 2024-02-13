@@ -16,7 +16,7 @@ function digit=calculateDigitCheck(eanDigitLess)
 endfunction
 
 function isEan = isCorrectEan(possibleEan)
-    if length(possibleEan) == 13 then
+    if length(possibleEan) == 13 && isnum(possibleEan) then
         correctDigit = calculateDigitCheck(part(possibleEan,1:12))
         if correctDigit == strtod(part(possibleEan,13))then
             isEan = %T
