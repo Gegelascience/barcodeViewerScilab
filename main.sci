@@ -12,5 +12,5 @@ if isCorrectEan(possibleEan) == %T then
     barcode = calculateBarcode(possibleEan)
     
     showInPlot(barcode)
-    
+    writeInSVG(barcode,"./test.svg")
 end
